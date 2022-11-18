@@ -4,8 +4,8 @@
         <TargetFramework>net7.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <PackageVersion>1.0.1</PackageVersion>
         <PackageId>NET7-StackExchange.Redis.Extensions.AspNetCore</PackageId>
-        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <Authors>NET7-StackExchange.Redis.Extensions.AspNetCore</Authors>
     </PropertyGroup>
 
