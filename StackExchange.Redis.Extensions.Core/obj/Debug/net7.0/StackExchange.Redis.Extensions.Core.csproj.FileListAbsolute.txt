@@ -1,0 +1,12 @@
+C:\Users\ismkdc\projects\ismkdc.StackExchange.Redis.Extensions\StackExchange.Redis.Extensions.Core\obj\Debug\net7.0\StackExchange.Redis.Extensions.Core.csproj.AssemblyReference.cache
+C:\Users\ismkdc\projects\ismkdc.StackExchange.Redis.Extensions\StackExchange.Redis.Extensions.Core\obj\Debug\net7.0\StackExchange.Redis.Extensions.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ismkdc\projects\ismkdc.StackExchange.Redis.Extensions\StackExchange.Redis.Extensions.Core\obj\Debug\net7.0\StackExchange.Redis.Extensions.Core.AssemblyInfoInputs.cache
+C:\Users\ismkdc\projects\ismkdc.StackExchange.Redis.Extensions\StackExchange.Redis.Extensions.Core\obj\Debug\net7.0\StackExchange.Redis.Extensions.Core.AssemblyInfo.cs
+C:\Users\ismkdc\projects\ismkdc.StackExchange.Redis.Extensions\StackExchange.Redis.Extensions.Core\obj\Debug\net7.0\StackExchange.Redis.Extensions.Core.csproj.CoreCompileInputs.cache
+C:\Users\ismkdc\projects\ismkdc.StackExchange.Redis.Extensions\StackExchange.Redis.Extensions.Core\bin\Debug\net7.0\StackExchange.Redis.Extensions.Core.deps.json
+C:\Users\ismkdc\projects\ismkdc.StackExchange.Redis.Extensions\StackExchange.Redis.Extensions.Core\bin\Debug\net7.0\StackExchange.Redis.Extensions.Core.dll
+C:\Users\ismkdc\projects\ismkdc.StackExchange.Redis.Extensions\StackExchange.Redis.Extensions.Core\bin\Debug\net7.0\StackExchange.Redis.Extensions.Core.pdb
+C:\Users\ismkdc\projects\ismkdc.StackExchange.Redis.Extensions\StackExchange.Redis.Extensions.Core\obj\Debug\net7.0\StackExchange.Redis.Extensions.Core.dll
+C:\Users\ismkdc\projects\ismkdc.StackExchange.Redis.Extensions\StackExchange.Redis.Extensions.Core\obj\Debug\net7.0\refint\StackExchange.Redis.Extensions.Core.dll
+C:\Users\ismkdc\projects\ismkdc.StackExchange.Redis.Extensions\StackExchange.Redis.Extensions.Core\obj\Debug\net7.0\StackExchange.Redis.Extensions.Core.pdb
+C:\Users\ismkdc\projects\ismkdc.StackExchange.Redis.Extensions\StackExchange.Redis.Extensions.Core\obj\Debug\net7.0\ref\StackExchange.Redis.Extensions.Core.dll

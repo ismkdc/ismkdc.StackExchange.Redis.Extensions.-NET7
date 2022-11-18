@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StackExchange.Redis.Extensions.AspNetCore", "StackExchange.Redis.Extensions.AspNetCore\StackExchange.Redis.Extensions.AspNetCore.csproj", "{477F7915-6063-4599-9E56-731BDDA05735}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StackExchange.Redis.Extensions.Core", "StackExchange.Redis.Extensions.Core\StackExchange.Redis.Extensions.Core.csproj", "{8075F9E8-A060-4807-9D7B-B6F0D6B9B312}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StackExchange.Redis.Extensions.System.Text.Json", "StackExchange.Redis.Extensions.System.Text.Json\StackExchange.Redis.Extensions.System.Text.Json.csproj", "{D47DEE67-26D3-4536-93F1-EF2603A81A78}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{477F7915-6063-4599-9E56-731BDDA05735}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{477F7915-6063-4599-9E56-731BDDA05735}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{477F7915-6063-4599-9E56-731BDDA05735}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{477F7915-6063-4599-9E56-731BDDA05735}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8075F9E8-A060-4807-9D7B-B6F0D6B9B312}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8075F9E8-A060-4807-9D7B-B6F0D6B9B312}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8075F9E8-A060-4807-9D7B-B6F0D6B9B312}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8075F9E8-A060-4807-9D7B-B6F0D6B9B312}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D47DEE67-26D3-4536-93F1-EF2603A81A78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D47DEE67-26D3-4536-93F1-EF2603A81A78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D47DEE67-26D3-4536-93F1-EF2603A81A78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D47DEE67-26D3-4536-93F1-EF2603A81A78}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,29 @@
+{
+  "version": 2,
+  "dgSpecHash": "lN/F9LxJq46Gs8jn5V+ozVGmjqakZIQPLuVfirlQenWqtyyOCr9nUVZU6l6bwtgfE3Glpby2dxLFs5RM7jHOTw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\ismkdc\\projects\\ismkdc.StackExchange.Redis.Extensions\\StackExchange.Redis.Extensions.AspNetCore\\StackExchange.Redis.Extensions.AspNetCore.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ismkdc\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\7.0.0\\microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
+    "C:\\Users\\ismkdc\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\ismkdc\\.nuget\\packages\\microsoft.extensions.logging\\7.0.0\\microsoft.extensions.logging.7.0.0.nupkg.sha512",
+    "C:\\Users\\ismkdc\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\microsoft.extensions.logging.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\ismkdc\\.nuget\\packages\\microsoft.extensions.options\\7.0.0\\microsoft.extensions.options.7.0.0.nupkg.sha512",
+    "C:\\Users\\ismkdc\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512",
+    "C:\\Users\\ismkdc\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
+    "C:\\Users\\ismkdc\\.nuget\\packages\\microsoft.win32.registry\\5.0.0\\microsoft.win32.registry.5.0.0.nupkg.sha512",
+    "C:\\Users\\ismkdc\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\microsoft.win32.systemevents.5.0.0.nupkg.sha512",
+    "C:\\Users\\ismkdc\\.nuget\\packages\\pipelines.sockets.unofficial\\2.2.2\\pipelines.sockets.unofficial.2.2.2.nupkg.sha512",
+    "C:\\Users\\ismkdc\\.nuget\\packages\\stackexchange.redis\\2.6.70\\stackexchange.redis.2.6.70.nupkg.sha512",
+    "C:\\Users\\ismkdc\\.nuget\\packages\\system.configuration.configurationmanager\\5.0.0\\system.configuration.configurationmanager.5.0.0.nupkg.sha512",
+    "C:\\Users\\ismkdc\\.nuget\\packages\\system.diagnostics.performancecounter\\5.0.0\\system.diagnostics.performancecounter.5.0.0.nupkg.sha512",
+    "C:\\Users\\ismkdc\\.nuget\\packages\\system.drawing.common\\5.0.0\\system.drawing.common.5.0.0.nupkg.sha512",
+    "C:\\Users\\ismkdc\\.nuget\\packages\\system.io.pipelines\\5.0.1\\system.io.pipelines.5.0.1.nupkg.sha512",
+    "C:\\Users\\ismkdc\\.nuget\\packages\\system.security.accesscontrol\\5.0.0\\system.security.accesscontrol.5.0.0.nupkg.sha512",
+    "C:\\Users\\ismkdc\\.nuget\\packages\\system.security.cryptography.protecteddata\\5.0.0\\system.security.cryptography.protecteddata.5.0.0.nupkg.sha512",
+    "C:\\Users\\ismkdc\\.nuget\\packages\\system.security.permissions\\5.0.0\\system.security.permissions.5.0.0.nupkg.sha512",
+    "C:\\Users\\ismkdc\\.nuget\\packages\\system.security.principal.windows\\5.0.0\\system.security.principal.windows.5.0.0.nupkg.sha512",
+    "C:\\Users\\ismkdc\\.nuget\\packages\\system.windows.extensions\\5.0.0\\system.windows.extensions.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

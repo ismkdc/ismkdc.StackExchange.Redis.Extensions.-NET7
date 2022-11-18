@@ -1,0 +1,15 @@
+C:\Users\ismkdc\projects\ismkdc.StackExchange.Redis.Extensions\StackExchange.Redis.Extensions.System.Text.Json\obj\Debug\net7.0\StackExchange.Redis.Extensions.System.Text.Json.csproj.AssemblyReference.cache
+C:\Users\ismkdc\projects\ismkdc.StackExchange.Redis.Extensions\StackExchange.Redis.Extensions.System.Text.Json\obj\Debug\net7.0\StackExchange.Redis.Extensions.System.Text.Json.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ismkdc\projects\ismkdc.StackExchange.Redis.Extensions\StackExchange.Redis.Extensions.System.Text.Json\obj\Debug\net7.0\StackExchange.Redis.Extensions.System.Text.Json.AssemblyInfoInputs.cache
+C:\Users\ismkdc\projects\ismkdc.StackExchange.Redis.Extensions\StackExchange.Redis.Extensions.System.Text.Json\obj\Debug\net7.0\StackExchange.Redis.Extensions.System.Text.Json.AssemblyInfo.cs
+C:\Users\ismkdc\projects\ismkdc.StackExchange.Redis.Extensions\StackExchange.Redis.Extensions.System.Text.Json\obj\Debug\net7.0\StackExchange.Redis.Extensions.System.Text.Json.csproj.CoreCompileInputs.cache
+C:\Users\ismkdc\projects\ismkdc.StackExchange.Redis.Extensions\StackExchange.Redis.Extensions.System.Text.Json\bin\Debug\net7.0\StackExchange.Redis.Extensions.System.Text.Json.deps.json
+C:\Users\ismkdc\projects\ismkdc.StackExchange.Redis.Extensions\StackExchange.Redis.Extensions.System.Text.Json\bin\Debug\net7.0\StackExchange.Redis.Extensions.System.Text.Json.dll
+C:\Users\ismkdc\projects\ismkdc.StackExchange.Redis.Extensions\StackExchange.Redis.Extensions.System.Text.Json\bin\Debug\net7.0\StackExchange.Redis.Extensions.System.Text.Json.pdb
+C:\Users\ismkdc\projects\ismkdc.StackExchange.Redis.Extensions\StackExchange.Redis.Extensions.System.Text.Json\bin\Debug\net7.0\StackExchange.Redis.Extensions.Core.dll
+C:\Users\ismkdc\projects\ismkdc.StackExchange.Redis.Extensions\StackExchange.Redis.Extensions.System.Text.Json\bin\Debug\net7.0\StackExchange.Redis.Extensions.Core.pdb
+C:\Users\ismkdc\projects\ismkdc.StackExchange.Redis.Extensions\StackExchange.Redis.Extensions.System.Text.Json\obj\Debug\net7.0\StackExchange.Redis.Extensions.System.Text.Json.csproj.CopyComplete
+C:\Users\ismkdc\projects\ismkdc.StackExchange.Redis.Extensions\StackExchange.Redis.Extensions.System.Text.Json\obj\Debug\net7.0\StackExchange.Redis.Extensions.System.Text.Json.dll
+C:\Users\ismkdc\projects\ismkdc.StackExchange.Redis.Extensions\StackExchange.Redis.Extensions.System.Text.Json\obj\Debug\net7.0\refint\StackExchange.Redis.Extensions.System.Text.Json.dll
+C:\Users\ismkdc\projects\ismkdc.StackExchange.Redis.Extensions\StackExchange.Redis.Extensions.System.Text.Json\obj\Debug\net7.0\StackExchange.Redis.Extensions.System.Text.Json.pdb
+C:\Users\ismkdc\projects\ismkdc.StackExchange.Redis.Extensions\StackExchange.Redis.Extensions.System.Text.Json\obj\Debug\net7.0\ref\StackExchange.Redis.Extensions.System.Text.Json.dll
