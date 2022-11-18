@@ -4,8 +4,9 @@
         <TargetFramework>net7.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
-        <PackageId>StackExchange.Redis.Extensions.System.Text.Json-NET7</PackageId>
+        <PackageId>NET7-StackExchange.Redis.Extensions.System.Text.Json</PackageId>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <Authors>NET7-StackExchange.Redis.Extensions.System.Text.Json</Authors>
     </PropertyGroup>
 
     <ItemGroup>
