@@ -1,14 +1,12 @@
 // Copyright (c) Ugo Lattanzi.  All Rights Reserved.  Licensed under the MIT license.  See License.txt in the project root for license information.
 
 using System.Collections;
-using System.Collections.Generic;
-
 using StackExchange.Redis.Extensions.Core.Configuration;
 
 namespace StackExchange.Redis.Extensions.Core.ServerIteration;
 
 /// <summary>
-/// The class that allows you to enumerate all the redis servers.
+///     The class that allows you to enumerate all the redis servers.
 /// </summary>
 public class ServerEnumerable : IEnumerable<IServer>
 {
@@ -17,7 +15,7 @@ public class ServerEnumerable : IEnumerable<IServer>
     private readonly ServerEnumerationStrategy.UnreachableServerActionOptions unreachableServerAction;
 
     /// <summary>
-    /// Initializes a new instance of the <see cref="ServerEnumerable"/> class.
+    ///     Initializes a new instance of the <see cref="ServerEnumerable" /> class.
     /// </summary>
     /// <param name="multiplexer">The redis connection.</param>
     /// <param name="targetRole">The target role.</param>
@@ -33,7 +31,7 @@ public class ServerEnumerable : IEnumerable<IServer>
     }
 
     /// <summary>
-    /// Return the enumerator of the Redis servers
+    ///     Return the enumerator of the Redis servers
     /// </summary>
     public IEnumerator<IServer> GetEnumerator()
     {
@@ -41,16 +39,13 @@ public class ServerEnumerable : IEnumerable<IServer>
         {
             var server = multiplexer.GetServer(endPoint);
             if (targetRole == ServerEnumerationStrategy.TargetRoleOptions.PreferSlave)
-            {
                 if (!server.IsReplica)
                     continue;
-            }
 
-            if (unreachableServerAction == ServerEnumerationStrategy.UnreachableServerActionOptions.IgnoreIfOtherAvailable)
-            {
+            if (unreachableServerAction ==
+                ServerEnumerationStrategy.UnreachableServerActionOptions.IgnoreIfOtherAvailable)
                 if (!server.IsConnected || !server.Features.Scan)
                     continue;
-            }
 
             yield return server;
         }

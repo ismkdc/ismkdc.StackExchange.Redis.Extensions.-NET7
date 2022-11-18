@@ -1,15 +1,12 @@
 // Copyright (c) Ugo Lattanzi.  All Rights Reserved.  Licensed under the MIT license.  See License.txt in the project root for license information.
 
-using System;
-using System.Linq;
-using System.Threading.Tasks;
-
 namespace StackExchange.Redis.Extensions.Core.Implementations;
 
 public partial class RedisDatabase
 {
-    /// <inheritdoc/>
-    public Task<long> ListAddToLeftAsync<T>(string key, T item, When when = When.Always, CommandFlags flags = CommandFlags.None)
+    /// <inheritdoc />
+    public Task<long> ListAddToLeftAsync<T>(string key, T item, When when = When.Always,
+        CommandFlags flags = CommandFlags.None)
     {
         if (string.IsNullOrEmpty(key))
             throw new ArgumentException("key cannot be empty.", nameof(key));
@@ -22,7 +19,7 @@ public partial class RedisDatabase
         return Database.ListLeftPushAsync(key, serializedItem, when, flags);
     }
 
-    /// <inheritdoc/>
+    /// <inheritdoc />
     public Task<long> ListAddToLeftAsync<T>(string key, T[] items, CommandFlags flags = CommandFlags.None)
     {
         if (string.IsNullOrEmpty(key))
@@ -36,7 +33,7 @@ public partial class RedisDatabase
         return Database.ListLeftPushAsync(key, serializedItems, flags);
     }
 
-    /// <inheritdoc/>
+    /// <inheritdoc />
     public async Task<T?> ListGetFromRightAsync<T>(string key, CommandFlags flags = CommandFlags.None)
     {
         if (string.IsNullOrEmpty(key))

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "lN/F9LxJq46Gs8jn5V+ozVGmjqakZIQPLuVfirlQenWqtyyOCr9nUVZU6l6bwtgfE3Glpby2dxLFs5RM7jHOTw==",
+  "dgSpecHash": "Q23g/VuXilRm7SdMiQKeBkGPxcj3MdWIYvtMWVzgUDTBoj1ljVacfm18KsY4I5gKseX4gPd1eV9FzF/DydBW7w==",
   "success": true,
   "projectFilePath": "C:\\Users\\ismkdc\\projects\\ismkdc.StackExchange.Redis.Extensions\\StackExchange.Redis.Extensions.AspNetCore\\StackExchange.Redis.Extensions.AspNetCore.csproj",
   "expectedPackageFiles": [

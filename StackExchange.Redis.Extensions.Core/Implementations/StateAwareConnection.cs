@@ -1,9 +1,6 @@
 // Copyright (c) Ugo Lattanzi.  All Rights Reserved.  Licensed under the MIT license.  See License.txt in the project root for license information.
 
-using System;
-
 using Microsoft.Extensions.Logging;
-
 using StackExchange.Redis.Extensions.Core.Abstractions;
 
 namespace StackExchange.Redis.Extensions.Core.Implementations;
@@ -37,9 +34,15 @@ public sealed partial class RedisConnectionPoolManager
 
         public IConnectionMultiplexer Connection { get; }
 
-        public long TotalOutstanding() => Connection.GetCounters().TotalOutstanding;
+        public long TotalOutstanding()
+        {
+            return Connection.GetCounters().TotalOutstanding;
+        }
 
-        public bool IsConnected() => !Connection.IsConnecting;
+        public bool IsConnected()
+        {
+            return !Connection.IsConnecting;
+        }
 
         public void Dispose()
         {

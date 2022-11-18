@@ -76,7 +76,7 @@
       "version": "1.0.0",
       "restore": {
         "projectUniqueName": "C:\\Users\\ismkdc\\projects\\ismkdc.StackExchange.Redis.Extensions\\StackExchange.Redis.Extensions.System.Text.Json\\StackExchange.Redis.Extensions.System.Text.Json.csproj",
-        "projectName": "StackExchange.Redis.Extensions.System.Text.Json",
+        "projectName": "StackExchange.Redis.Extensions.System.Text.Json-NET7",
         "projectPath": "C:\\Users\\ismkdc\\projects\\ismkdc.StackExchange.Redis.Extensions\\StackExchange.Redis.Extensions.System.Text.Json\\StackExchange.Redis.Extensions.System.Text.Json.csproj",
         "packagesPath": "C:\\Users\\ismkdc\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\ismkdc\\projects\\ismkdc.StackExchange.Redis.Extensions\\StackExchange.Redis.Extensions.System.Text.Json\\obj\\",

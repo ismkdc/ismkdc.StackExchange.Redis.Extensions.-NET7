@@ -1,12 +1,9 @@
 // Copyright (c) Ugo Lattanzi.  All Rights Reserved.  Licensed under the MIT license.  See License.txt in the project root for license information.
 
-using System.Collections.Generic;
-using System.Threading.Tasks;
-
 namespace StackExchange.Redis.Extensions.Core.Abstractions;
 
 /// <summary>
-/// The Redis Database
+///     The Redis Database
 /// </summary>
 public partial interface IRedisDatabase
 {
@@ -67,7 +64,8 @@ public partial interface IRedisDatabase
     /// <summary>
     ///     Returns the values associated with the specified fields in the hash stored at key.
     ///     For every field that does not exist in the hash, a nil value is returned.
-    ///     Because a non-existing keys are treated as empty hashes, running HMGET against a non-existing key will return a list of nil values.
+    ///     Because a non-existing keys are treated as empty hashes, running HMGET against a non-existing key will return a
+    ///     list of nil values.
     /// </summary>
     /// <remarks>
     ///     Time complexity: O(N) where N is the number of fields being requested.
@@ -108,14 +106,16 @@ public partial interface IRedisDatabase
     Task<long> HashIncerementByAsync(string hashKey, string key, long value, CommandFlags flag = CommandFlags.None);
 
     /// <summary>
-    ///     Increment the specified field of an hash stored at key, and representing a floating point number, by the specified increment.
+    ///     Increment the specified field of an hash stored at key, and representing a floating point number, by the specified
+    ///     increment.
     ///     If the field does not exist, it is set to 0 before performing the operation.
     /// </summary>
     /// <remarks>
     ///     <para>
     ///         An error is returned if one of the following conditions occur:
     ///         * The field contains a value of the wrong type (not a string).
-    ///         * The current field content or the specified increment are not parsable as a double precision floating point number.
+    ///         * The current field content or the specified increment are not parsable as a double precision floating point
+    ///         number.
     ///     </para>
     ///     <para>
     ///         Time complexity: O(1)
@@ -151,7 +151,8 @@ public partial interface IRedisDatabase
     Task<long> HashLengthAsync(string hashKey, CommandFlags flag = CommandFlags.None);
 
     /// <summary>
-    ///     Sets field in the hash stored at key to value. If key does not exist, a new key holding a hash is created. If field already exists in the hash, it is overwritten.
+    ///     Sets field in the hash stored at key to value. If key does not exist, a new key holding a hash is created. If field
+    ///     already exists in the hash, it is overwritten.
     /// </summary>
     /// <typeparam name="T">Type of the returned value</typeparam>
     /// <param name="hashKey">The key of the hash in redis</param>
@@ -163,7 +164,8 @@ public partial interface IRedisDatabase
     ///     <c>true</c> if field is a new field in the hash and value was set.
     ///     <c>false</c> if field already exists in the hash and no operation was performed.
     /// </returns>
-    Task<bool> HashSetAsync<T>(string hashKey, string key, T value, bool nx = false, CommandFlags flag = CommandFlags.None);
+    Task<bool> HashSetAsync<T>(string hashKey, string key, T value, bool nx = false,
+        CommandFlags flag = CommandFlags.None);
 
     /// <summary>
     ///     Sets the specified fields to their respective values in the hash stored at key.
@@ -195,7 +197,8 @@ public partial interface IRedisDatabase
     ///     iterates fields of Hash types and their associated values.
     /// </summary>
     /// <remarks>
-    ///     Time complexity: O(1) for every call. O(N) for a complete iteration, including enough command calls for the cursor to return back to 0.
+    ///     Time complexity: O(1) for every call. O(N) for a complete iteration, including enough command calls for the cursor
+    ///     to return back to 0.
     ///     N is the number of elements inside the collection.
     /// </remarks>
     /// <typeparam name="T">Type of the returned value</typeparam>
@@ -203,5 +206,6 @@ public partial interface IRedisDatabase
     /// <param name="pattern">GLOB search pattern</param>
     /// <param name="pageSize">Number of elements to retrieve from the redis server in the cursor</param>
     /// <param name="flag">Behaviour markers associated with a given command</param>
-    Dictionary<string, T> HashScan<T>(string hashKey, string pattern, int pageSize = 10, CommandFlags flag = CommandFlags.None);
+    Dictionary<string, T> HashScan<T>(string hashKey, string pattern, int pageSize = 10,
+        CommandFlags flag = CommandFlags.None);
 }

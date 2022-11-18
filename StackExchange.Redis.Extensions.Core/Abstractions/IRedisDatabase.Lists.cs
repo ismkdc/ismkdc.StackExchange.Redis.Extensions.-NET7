@@ -1,11 +1,9 @@
 // Copyright (c) Ugo Lattanzi.  All Rights Reserved.  Licensed under the MIT license.  See License.txt in the project root for license information.
 
-using System.Threading.Tasks;
-
 namespace StackExchange.Redis.Extensions.Core.Abstractions;
 
 /// <summary>
-/// The Redis Database
+///     The Redis Database
 /// </summary>
 public partial interface IRedisDatabase
 {
@@ -17,8 +15,8 @@ public partial interface IRedisDatabase
     /// <param name="item">The item.</param>
     /// <param name="when">The condition (Always is the default value).</param>
     /// <param name="flag">Behaviour markers associated with a given command</param>
-    Task<long> ListAddToLeftAsync<T>(string key, T item, When when = When.Always, CommandFlags flag = CommandFlags.None)
-       ;
+    Task<long> ListAddToLeftAsync<T>(string key, T item, When when = When.Always,
+        CommandFlags flag = CommandFlags.None);
 
     /// <summary>
     ///     Lists the add to left asynchronous.

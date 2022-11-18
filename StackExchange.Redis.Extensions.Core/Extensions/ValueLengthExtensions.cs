@@ -1,25 +1,20 @@
 // Copyright (c) Ugo Lattanzi.  All Rights Reserved.  Licensed under the MIT license.  See License.txt in the project root for license information.
 
-using System;
-using System.Collections.Generic;
-
 namespace StackExchange.Redis.Extensions.Core.Extensions;
 
 internal static class ValueLengthExtensions
 {
-    public static IEnumerable<KeyValuePair<string, byte[]>> OfValueInListSize<T>(this IEnumerable<Tuple<string, T>> items, ISerializer serializer, uint maxValueLength)
+    public static IEnumerable<KeyValuePair<string, byte[]>> OfValueInListSize<T>(
+        this IEnumerable<Tuple<string, T>> items, ISerializer serializer, uint maxValueLength)
     {
         using var iterator = items.GetEnumerator();
 
         while (iterator.MoveNext())
-        {
             if (iterator.Current != null)
-            {
-                yield return new(
+                yield return new KeyValuePair<string, byte[]>(
                     iterator.Current.Item1,
-                    iterator.Current.Item2.SerializeItem(serializer).CheckLength(maxValueLength, iterator.Current.Item1));
-            }
-        }
+                    iterator.Current.Item2.SerializeItem(serializer)
+                        .CheckLength(maxValueLength, iterator.Current.Item1));
     }
 
     public static byte[] OfValueSize<T>(this T? value, ISerializer serializer, uint maxValueLength, string key)

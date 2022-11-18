@@ -1098,7 +1098,7 @@
     "version": "1.0.0",
     "restore": {
       "projectUniqueName": "C:\\Users\\ismkdc\\projects\\ismkdc.StackExchange.Redis.Extensions\\StackExchange.Redis.Extensions.AspNetCore\\StackExchange.Redis.Extensions.AspNetCore.csproj",
-      "projectName": "StackExchange.Redis.Extensions.AspNetCore",
+      "projectName": "StackExchange.Redis.Extensions.AspNetCore-NET7",
       "projectPath": "C:\\Users\\ismkdc\\projects\\ismkdc.StackExchange.Redis.Extensions\\StackExchange.Redis.Extensions.AspNetCore\\StackExchange.Redis.Extensions.AspNetCore.csproj",
       "packagesPath": "C:\\Users\\ismkdc\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\ismkdc\\projects\\ismkdc.StackExchange.Redis.Extensions\\StackExchange.Redis.Extensions.AspNetCore\\obj\\",

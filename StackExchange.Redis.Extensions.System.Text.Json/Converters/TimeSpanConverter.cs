@@ -1,6 +1,5 @@
 // Copyright (c) Ugo Lattanzi.  All Rights Reserved.  Licensed under the MIT license.  See License.txt in the project root for license information.
 
-using System;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 

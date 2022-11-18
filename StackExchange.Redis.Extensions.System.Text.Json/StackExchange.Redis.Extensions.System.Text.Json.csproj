@@ -4,10 +4,12 @@
         <TargetFramework>net7.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <PackageId>StackExchange.Redis.Extensions.System.Text.Json-NET7</PackageId>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\StackExchange.Redis.Extensions.Core\StackExchange.Redis.Extensions.Core.csproj" />
+        <ProjectReference Include="..\StackExchange.Redis.Extensions.Core\StackExchange.Redis.Extensions.Core.csproj" />
     </ItemGroup>
 
 </Project>

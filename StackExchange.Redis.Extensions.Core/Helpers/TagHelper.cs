@@ -3,7 +3,7 @@
 namespace StackExchange.Redis.Extensions.Core.Helpers;
 
 /// <summary>
-/// Helper for generating ta key
+///     Helper for generating ta key
 /// </summary>
 public static class TagHelper
 {
@@ -12,5 +12,8 @@ public static class TagHelper
     /// </summary>
     /// <param name="tag">Tag</param>
     /// <returns>Return key associated with tag</returns>
-    public static string GenerateTagKey(string tag) => "tag:" + tag;
+    public static string GenerateTagKey(string tag)
+    {
+        return "tag:" + tag;
+    }
 }

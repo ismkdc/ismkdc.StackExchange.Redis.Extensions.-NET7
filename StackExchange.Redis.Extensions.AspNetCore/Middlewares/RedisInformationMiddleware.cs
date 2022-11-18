@@ -1,13 +1,8 @@
 // Copyright (c) Ugo Lattanzi.  All Rights Reserved.  Licensed under the MIT license.  See License.txt in the project root for license information.
 
-using System.Collections.Generic;
-using System.Linq;
 using System.Text.Json;
-using System.Threading.Tasks;
-
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
-
 using StackExchange.Redis.Extensions.Core.Abstractions;
 using StackExchange.Redis.Extensions.Core.Models;
 
@@ -17,9 +12,9 @@ internal class RedisInformationMiddleware
 {
     private readonly ILogger<RedisInformationMiddleware> logger;
     private readonly RequestDelegate next;
+    private readonly RedisMiddlewareAccessOptions options;
     private readonly IRedisClientFactory redisClientFactory;
     private readonly IRedisDatabase redisDatabase;
-    private readonly RedisMiddlewareAccessOptions options;
 
     public RedisInformationMiddleware(
         RequestDelegate next,
@@ -40,7 +35,8 @@ internal class RedisInformationMiddleware
 #pragma warning restore RCS1046
     {
         if (logger.IsEnabled(LogLevel.Trace))
-            logger.LogTrace("{MiddlewareName} --> Handling request: {Path}", nameof(RedisInformationMiddleware), context.Request.Path);
+            logger.LogTrace("{MiddlewareName} --> Handling request: {Path}", nameof(RedisInformationMiddleware),
+                context.Request.Path);
 
         if (context.Request.Method == "GET" && context.Request.Path == "/redis/connectionInfo")
         {

@@ -1,35 +1,31 @@
 // Copyright (c) Ugo Lattanzi.  All Rights Reserved.  Licensed under the MIT license.  See License.txt in the project root for license information.
 
-using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.Abstractions;
-
 using StackExchange.Redis.Extensions.Core.Abstractions;
 using StackExchange.Redis.Extensions.Core.Configuration;
-using StackExchange.Redis.Extensions.Core.Extensions;
 using StackExchange.Redis.Extensions.Core.Models;
 
 namespace StackExchange.Redis.Extensions.Core.Implementations;
 
-/// <inheritdoc/>
+/// <inheritdoc />
 public sealed partial class RedisConnectionPoolManager : IRedisConnectionPoolManager
 {
-    private readonly static object @lock = new();
+    private static readonly object @lock = new();
     private readonly IStateAwareConnection[] connections;
-    private readonly RedisConfiguration redisConfiguration;
     private readonly ILogger<RedisConnectionPoolManager> logger;
     private readonly Random random = new();
+    private readonly RedisConfiguration redisConfiguration;
     private bool isDisposed;
 
     /// <summary>
-    /// Initializes a new instance of the <see cref="RedisConnectionPoolManager"/> class.
+    ///     Initializes a new instance of the <see cref="RedisConnectionPoolManager" /> class.
     /// </summary>
     /// <param name="redisConfiguration">The redis configuration.</param>
     /// <param name="logger">The logger.</param>
-    public RedisConnectionPoolManager(RedisConfiguration redisConfiguration, ILogger<RedisConnectionPoolManager>? logger = null)
+    public RedisConnectionPoolManager(RedisConfiguration redisConfiguration,
+        ILogger<RedisConnectionPoolManager>? logger = null)
     {
         this.redisConfiguration = redisConfiguration ?? throw new ArgumentNullException(nameof(redisConfiguration));
         this.logger = logger ?? NullLogger<RedisConnectionPoolManager>.Instance;
@@ -41,29 +37,14 @@ public sealed partial class RedisConnectionPoolManager : IRedisConnectionPoolMan
         }
     }
 
-    /// <inheritdoc/>
+    /// <inheritdoc />
     public void Dispose()
     {
         Dispose(true);
         GC.SuppressFinalize(this);
     }
 
-    private void Dispose(bool disposing)
-    {
-        if (isDisposed)
-            return;
-
-        if (disposing)
-        {
-            // free managed resources
-            foreach (var connection in connections)
-                connection.Dispose();
-        }
-
-        isDisposed = true;
-    }
-
-    /// <inheritdoc/>
+    /// <inheritdoc />
     public IConnectionMultiplexer GetConnection()
     {
         IStateAwareConnection connection;
@@ -80,23 +61,25 @@ public sealed partial class RedisConnectionPoolManager : IRedisConnectionPoolMan
                 break;
 
             default:
-                throw new InvalidEnumArgumentException(nameof(redisConfiguration.ConnectionSelectionStrategy), (int)redisConfiguration.ConnectionSelectionStrategy, typeof(ConnectionSelectionStrategy));
+                throw new InvalidEnumArgumentException(nameof(redisConfiguration.ConnectionSelectionStrategy),
+                    (int)redisConfiguration.ConnectionSelectionStrategy, typeof(ConnectionSelectionStrategy));
         }
 
         if (logger.IsEnabled(LogLevel.Debug))
-            logger.LogDebug("Using connection {HashCode} with {OutStanding} outstanding!", connection.Connection.GetHashCode().ToString(), connection.TotalOutstanding().ToString());
+            logger.LogDebug("Using connection {HashCode} with {OutStanding} outstanding!",
+                connection.Connection.GetHashCode().ToString(), connection.TotalOutstanding().ToString());
 
         return connection.Connection;
     }
 
-    /// <inheritdoc/>
+    /// <inheritdoc />
     public IEnumerable<IConnectionMultiplexer> GetConnections()
     {
         foreach (var connection in connections)
             yield return connection.Connection;
     }
 
-    /// <inheritdoc/>
+    /// <inheritdoc />
     public ConnectionPoolInformation GetConnectionInformations()
     {
         var activeConnections = 0;
@@ -113,12 +96,25 @@ public sealed partial class RedisConnectionPoolManager : IRedisConnectionPoolMan
             activeConnections++;
         }
 
-        return new()
+        return new ConnectionPoolInformation
         {
             RequiredPoolSize = redisConfiguration.PoolSize,
             ActiveConnections = activeConnections,
             InvalidConnections = invalidConnections
         };
+    }
+
+    private void Dispose(bool disposing)
+    {
+        if (isDisposed)
+            return;
+
+        if (disposing)
+            // free managed resources
+            foreach (var connection in connections)
+                connection.Dispose();
+
+        isDisposed = true;
     }
 
     private void EmitConnections()

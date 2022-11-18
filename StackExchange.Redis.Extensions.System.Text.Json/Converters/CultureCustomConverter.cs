@@ -1,6 +1,5 @@
 // Copyright (c) Ugo Lattanzi.  All Rights Reserved.  Licensed under the MIT license.  See License.txt in the project root for license information.
 
-using System;
 using System.Globalization;
 using System.Text.Json;
 using System.Text.Json.Serialization;
@@ -13,7 +12,7 @@ internal class CultureCustomConverter : JsonConverter<CultureInfo>
     {
         var name = reader.GetString();
 
-        return new(name!);
+        return new CultureInfo(name!);
     }
 
     public override void Write(Utf8JsonWriter writer, CultureInfo value, JsonSerializerOptions options)

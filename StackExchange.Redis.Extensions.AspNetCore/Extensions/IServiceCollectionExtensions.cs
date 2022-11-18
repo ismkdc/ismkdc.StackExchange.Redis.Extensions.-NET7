@@ -1,8 +1,5 @@
 // Copyright (c) Ugo Lattanzi.  All Rights Reserved.  Licensed under the MIT license.  See License.txt in the project root for license information.
 
-using System;
-using System.Collections.Generic;
-
 using StackExchange.Redis.Extensions.Core;
 using StackExchange.Redis.Extensions.Core.Abstractions;
 using StackExchange.Redis.Extensions.Core.Configuration;
@@ -11,12 +8,12 @@ using StackExchange.Redis.Extensions.Core.Implementations;
 namespace Microsoft.Extensions.DependencyInjection;
 
 /// <summary>
-/// A set of extension methods that help you to confire StackExchangeRedisExtensions into your dependency injection
+///     A set of extension methods that help you to confire StackExchangeRedisExtensions into your dependency injection
 /// </summary>
 public static class IServiceCollectionExtensions
 {
     /// <summary>
-    /// Add StackExchange.Redis with its serialization provider.
+    ///     Add StackExchange.Redis with its serialization provider.
     /// </summary>
     /// <param name="services">The service collection.</param>
     /// <param name="redisConfiguration">The redis configration.</param>
@@ -30,7 +27,7 @@ public static class IServiceCollectionExtensions
     }
 
     /// <summary>
-    /// Add StackExchange.Redis with its serialization provider.
+    ///     Add StackExchange.Redis with its serialization provider.
     /// </summary>
     /// <param name="services">The service collection.</param>
     /// <param name="redisConfiguration">The redis configration.</param>
@@ -44,7 +41,7 @@ public static class IServiceCollectionExtensions
     }
 
     /// <summary>
-    /// Add StackExchange.Redis with its serialization provider.
+    ///     Add StackExchange.Redis with its serialization provider.
     /// </summary>
     /// <param name="services">The service collection.</param>
     /// <param name="redisConfigurationFactory">The redis configration factory.</param>
@@ -57,11 +54,11 @@ public static class IServiceCollectionExtensions
         services.AddSingleton<IRedisClientFactory, RedisClientFactory>();
         services.AddSingleton<ISerializer, T>();
 
-        services.AddSingleton((provider) => provider
+        services.AddSingleton(provider => provider
             .GetRequiredService<IRedisClientFactory>()
             .GetDefaultRedisClient());
 
-        services.AddSingleton((provider) => provider
+        services.AddSingleton(provider => provider
             .GetRequiredService<IRedisClientFactory>()
             .GetDefaultRedisClient()
             .GetDefaultDatabase());

@@ -3,13 +3,13 @@
 namespace StackExchange.Redis.Extensions.Core.Models;
 
 /// <summary>
-/// The result class for rank results
+///     The result class for rank results
 /// </summary>
 /// <typeparam name="T"></typeparam>
 public class ScoreRankResult<T>
 {
     /// <summary>
-    /// Initializes a new instance of the <see cref="ScoreRankResult{T}"/> class.
+    ///     Initializes a new instance of the <see cref="ScoreRankResult{T}" /> class.
     /// </summary>
     /// <param name="element">The element into redis.</param>
     /// <param name="score">The score.</param>
@@ -20,12 +20,12 @@ public class ScoreRankResult<T>
     }
 
     /// <summary>
-    /// The element into redis
+    ///     The element into redis
     /// </summary>
     public T Element { get; }
 
     /// <summary>
-    /// The score
+    ///     The score
     /// </summary>
     public double Score { get; }
 }

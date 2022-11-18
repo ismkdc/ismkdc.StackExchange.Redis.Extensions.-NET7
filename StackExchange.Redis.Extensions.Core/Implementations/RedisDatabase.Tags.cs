@@ -1,10 +1,5 @@
 // Copyright (c) Ugo Lattanzi.  All Rights Reserved.  Licensed under the MIT license.  See License.txt in the project root for license information.
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
 using StackExchange.Redis.Extensions.Core.Extensions;
 using StackExchange.Redis.Extensions.Core.Helpers;
 
@@ -12,7 +7,7 @@ namespace StackExchange.Redis.Extensions.Core.Implementations;
 
 public partial class RedisDatabase
 {
-    /// <inheritdoc/>
+    /// <inheritdoc />
     public async Task<IEnumerable<T?>> GetByTagAsync<T>(string tag, CommandFlags commandFlags = CommandFlags.None)
     {
         var tagKey = TagHelper.GenerateTagKey(tag);
@@ -27,7 +22,7 @@ public partial class RedisDatabase
         return result.Values;
     }
 
-    /// <inheritdoc/>
+    /// <inheritdoc />
     public async Task<long> RemoveByTagAsync(string tag, CommandFlags commandFlags = CommandFlags.None)
     {
         var tagKey = TagHelper.GenerateTagKey(tag);

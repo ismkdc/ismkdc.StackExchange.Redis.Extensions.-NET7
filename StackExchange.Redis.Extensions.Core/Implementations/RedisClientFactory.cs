@@ -1,35 +1,32 @@
 // Copyright (c) Ugo Lattanzi.  All Rights Reserved.  Licensed under the MIT license.  See License.txt in the project root for license information.
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
-
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Logging.Abstractions;
-
 using StackExchange.Redis.Extensions.Core.Abstractions;
 using StackExchange.Redis.Extensions.Core.Configuration;
 
 namespace StackExchange.Redis.Extensions.Core.Implementations;
 
-/// <inheritdoc/>
+/// <inheritdoc />
 public class RedisClientFactory : IRedisClientFactory
 {
-    private readonly Dictionary<string, IRedisClient> redisCacheClients;
     private readonly string? defaultConnectionName;
+    private readonly Dictionary<string, IRedisClient> redisCacheClients;
 
     /// <summary>
-    /// Initializes a new instance of the <see cref="RedisClientFactory"/> class.
+    ///     Initializes a new instance of the <see cref="RedisClientFactory" /> class.
     /// </summary>
     /// <param name="configurations">The connection configurations.</param>
     /// <param name="loggerFactory">The logger factory</param>
     /// <param name="serializer">The cache serializer</param>
-    public RedisClientFactory(IEnumerable<RedisConfiguration> configurations, ILoggerFactory? loggerFactory, ISerializer serializer)
+    public RedisClientFactory(IEnumerable<RedisConfiguration> configurations, ILoggerFactory? loggerFactory,
+        ISerializer serializer)
     {
         // First of all, I need to validate the configurations
         var hasDefaultConfigured = false;
         var hashSet = new HashSet<string>();
-        var redisClientFactoryLogger = loggerFactory?.CreateLogger<RedisClientFactory>() ?? NullLogger<RedisClientFactory>.Instance;
+        var redisClientFactoryLogger =
+            loggerFactory?.CreateLogger<RedisClientFactory>() ?? NullLogger<RedisClientFactory>.Instance;
 
         var redisConfigurations = configurations.ToArray();
 
@@ -41,12 +38,15 @@ public class RedisClientFactory : IRedisClientFactory
             var configuration = redisConfigurations[i];
 
             if (configuration.IsDefault && hasDefaultConfigured)
-                throw new ArgumentException("There is more than one default configuration. Only one default configuration is allowed.");
+                throw new ArgumentException(
+                    "There is more than one default configuration. Only one default configuration is allowed.");
 
             if (string.IsNullOrEmpty(configuration.Name))
             {
                 configuration.Name = Guid.NewGuid().ToString();
-                redisClientFactoryLogger.LogWarning("There is no name configured for the Redis configuration. A new one will be created {Name}", configuration.Name);
+                redisClientFactoryLogger.LogWarning(
+                    "There is no name configured for the Redis configuration. A new one will be created {Name}",
+                    configuration.Name);
             }
 
             if (configuration.IsDefault)
@@ -62,11 +62,13 @@ public class RedisClientFactory : IRedisClientFactory
         }
 
         if (!hasDefaultConfigured)
-            throw new ArgumentException("There is no default configuration. At least one default configuration is required.");
+            throw new ArgumentException(
+                "There is no default configuration. At least one default configuration is required.");
 
-        redisCacheClients = new(redisConfigurations.Length);
+        redisCacheClients = new Dictionary<string, IRedisClient>(redisConfigurations.Length);
 
-        var poolManagerLogger = loggerFactory?.CreateLogger<RedisConnectionPoolManager>() ?? NullLogger<RedisConnectionPoolManager>.Instance;
+        var poolManagerLogger = loggerFactory?.CreateLogger<RedisConnectionPoolManager>() ??
+                                NullLogger<RedisConnectionPoolManager>.Instance;
 
         for (var i = 0; i < redisConfigurations.Length; i++)
         {
@@ -78,16 +80,19 @@ public class RedisClientFactory : IRedisClientFactory
         }
     }
 
-    /// <inheritdoc/>
-    public IEnumerable<IRedisClient> GetAllClients() => redisCacheClients.Values;
+    /// <inheritdoc />
+    public IEnumerable<IRedisClient> GetAllClients()
+    {
+        return redisCacheClients.Values;
+    }
 
-    /// <inheritdoc/>
+    /// <inheritdoc />
     public IRedisClient GetDefaultRedisClient()
     {
         return redisCacheClients[defaultConnectionName!];
     }
 
-    /// <inheritdoc/>
+    /// <inheritdoc />
     public IRedisClient GetRedisClient(string? name = null)
     {
         name ??= defaultConnectionName!;
@@ -95,13 +100,13 @@ public class RedisClientFactory : IRedisClientFactory
         return redisCacheClients[name];
     }
 
-    /// <inheritdoc/>
+    /// <inheritdoc />
     public IRedisDatabase GetDefaultRedisDatabase()
     {
         return redisCacheClients[defaultConnectionName!].GetDefaultDatabase();
     }
 
-    /// <inheritdoc/>
+    /// <inheritdoc />
     public IRedisDatabase GetRedisDatabase(string? name = null)
     {
         name ??= defaultConnectionName!;

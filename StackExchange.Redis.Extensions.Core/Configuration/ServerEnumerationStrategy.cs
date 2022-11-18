@@ -3,13 +3,13 @@
 namespace StackExchange.Redis.Extensions.Core.Configuration;
 
 /// <summary>
-/// This class represent the Server enumeration strategy used in the operations
-/// that require to iterate all the redis servers
+///     This class represent the Server enumeration strategy used in the operations
+///     that require to iterate all the redis servers
 /// </summary>
 public class ServerEnumerationStrategy
 {
     /// <summary>
-    /// The iteration mode.
+    ///     The iteration mode.
     /// </summary>
     public enum ModeOptions
     {
@@ -21,7 +21,7 @@ public class ServerEnumerationStrategy
     }
 
     /// <summary>
-    /// The target role.
+    ///     The target role.
     /// </summary>
     public enum TargetRoleOptions
     {
@@ -33,7 +33,7 @@ public class ServerEnumerationStrategy
     }
 
     /// <summary>
-    /// The Unreachable server action.
+    ///     The Unreachable server action.
     /// </summary>
     public enum UnreachableServerActionOptions
     {
@@ -45,26 +45,26 @@ public class ServerEnumerationStrategy
     }
 
     /// <summary>
-    /// Gets or sets the strategy mode
+    ///     Gets or sets the strategy mode
     /// </summary>
     /// <value>
-    ///   Default value All.
+    ///     Default value All.
     /// </value>
     public ModeOptions Mode { get; set; }
 
     /// <summary>
-    /// Gets or sets specify the target role
+    ///     Gets or sets specify the target role
     /// </summary>
     /// <value>
-    ///   Default value Any.
+    ///     Default value Any.
     /// </value>
     public TargetRoleOptions TargetRole { get; set; }
 
     /// <summary>
-    /// Gets or sets the unreachable server action
+    ///     Gets or sets the unreachable server action
     /// </summary>
     /// <value>
-    ///   Default value Throw.
+    ///     Default value Throw.
     /// </value>
     public UnreachableServerActionOptions UnreachableServerAction { get; set; }
 }
