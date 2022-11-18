@@ -7,8 +7,6 @@
         <PackageVersion>1.0.2</PackageVersion>
         <PackageId>NET7-StackExchange.Redis.Extensions.AspNetCore</PackageId>
         <Authors>NET7-StackExchange.Redis.Extensions.AspNetCore</Authors>
-        <IncludeSource>True</IncludeSource>
-        <IncludeSymbols>True</IncludeSymbols>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     </PropertyGroup>
 
