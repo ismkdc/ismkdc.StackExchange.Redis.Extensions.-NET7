@@ -1,10 +1,10 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StackExchange.Redis.Extensions.AspNetCore", "StackExchange.Redis.Extensions.AspNetCore\StackExchange.Redis.Extensions.AspNetCore.csproj", "{477F7915-6063-4599-9E56-731BDDA05735}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StackExchange.Redis.Extensions.AspNetCore.NET7", "StackExchange.Redis.Extensions.AspNetCore.NET7\StackExchange.Redis.Extensions.AspNetCore.NET7.csproj", "{477F7915-6063-4599-9E56-731BDDA05735}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StackExchange.Redis.Extensions.Core", "StackExchange.Redis.Extensions.Core\StackExchange.Redis.Extensions.Core.csproj", "{8075F9E8-A060-4807-9D7B-B6F0D6B9B312}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StackExchange.Redis.Extensions.Core.NET7", "StackExchange.Redis.Extensions.Core.NET7\StackExchange.Redis.Extensions.Core.NET7.csproj", "{8075F9E8-A060-4807-9D7B-B6F0D6B9B312}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StackExchange.Redis.Extensions.System.Text.Json", "StackExchange.Redis.Extensions.System.Text.Json\StackExchange.Redis.Extensions.System.Text.Json.csproj", "{D47DEE67-26D3-4536-93F1-EF2603A81A78}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StackExchange.Redis.Extensions.System.Text.Json.NET7", "StackExchange.Redis.Extensions.System.Text.Json.NET7\StackExchange.Redis.Extensions.System.Text.Json.NET7.csproj", "{D47DEE67-26D3-4536-93F1-EF2603A81A78}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
